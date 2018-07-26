@@ -44,9 +44,7 @@ GET /auth/login
 POST /auth/login - POST Body: username, password
 POST auth/logout - POST Body: nothing
 
-GET / bars
-GET / supermarkets
-GET / stores
+GET / places
 GET / places/:id
 GET / myAccount/:id
 GET /places/new
@@ -59,7 +57,7 @@ POST /places/new
 ```
 Places
  - name: String
- - description: String
+ - description: type,
  - location: type:point, coordinates
  - imgUrl: string
 ```    
