@@ -65,6 +65,7 @@ Places
 ```
 User
  - username: String
+ - email: Sring
  - password: String
  - favorites: [ref places id]
  - myPlaces: [ref places id]
