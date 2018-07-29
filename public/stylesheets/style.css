@@ -1,8 +1,111 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-a {
-  color: #00B7FF;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+  background-color: lightcyan
+
+}
+/* ---- components ---- */
+nav { 
+height: 150px;
+background-color:black;
+display: flex;
+align-items: center;
+}
+
+nav a {
+  font-size: 60px;
+  color:white;
+  padding-left: 20px;
+}
+
+header {
+  height: 450px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header p {
+  font-size: 60px;
+  color: blue;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+
+}
+.card {
+ width: 100%;
+ height: 300px;
+ background-color: green;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.card a {
+color: white;
+font-size: 80px;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.first-card { 
+  background-image: url(/images/dog-default.jpg);
+  background-position: 100% 30%;
+  background-size: cover;
+  filter: grayscale(60%);
+}
+
+.second-card { 
+  background-image: url(/images/accomodation-category.jpeg);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(60%);
+  margin: 20px 0;
+  
+}
+
+.third-card { 
+  background-image: url(/images/store-category.png);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(60%);
+}
+
+footer{
+  height: 200px;
+  background-color:black;
+  color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
 }
