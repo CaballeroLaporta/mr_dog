@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/placesdb');
+mongoose.connect('mongodb://localhost/mr-dog-db');
 const Place = require('../models/place');
 
 const places = [

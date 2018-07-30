@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/usersdb');
+mongoose.connect('mongodb://localhost/mr-dog-db');
 const User = require('../models/user');
 
 const users = [
