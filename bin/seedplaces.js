@@ -1,13 +1,21 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/db');
+mongoose.connect('mongodb://localhost/placesdb');
 const Place = require('../models/place');
 
 const places = [
   {
-    name:  "string",
-    description:  "type",
-    location: "string",
-    imgUrl: [_img]
+    name:  "Bar Pepe",
+    type: "bar",
+    description:  "cañas y tapas",
+    location: "Carrer de Provença, 115",
+    imgUrl:0
+  },
+  {
+    name:  "Milenium",
+    type: "bar",
+    description:  "club nocturno de copas",
+    location: "Carrer de Mallorca, 21",
+    imgUrl:0
   }
 ]
 

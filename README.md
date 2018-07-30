@@ -36,19 +36,26 @@ Store Location
 
 ## ROUTES:
 ```
-GET / 
 
+## INDEX
+GET / --> Show the list of available places types
+
+## AUTH
 GET /auth/signup
 POST auth/signup - POST Body: username, password
 GET /auth/login
 POST /auth/login - POST Body: username, password
 POST auth/logout - POST Body: nothing
 
-GET / places
-GET / places/:id
-GET / myAccount/:id
-GET /places/new
-POST /places/new
+## PLACES
+GET /places?type=type_of_place  --> List all the places of a certain type
+GET /places/:id --> show a place
+GET /places/new --> show the form for adding a new place
+POST /places --> Add the place
+
+## PROFILE
+GET /profile --> Show the profile of the current user
+GET /profile/edit
 
 ```
 
@@ -56,19 +63,40 @@ POST /places/new
 
 ```
 Places
- - name: String
- - description: type,
- - location: type:point, coordinates
- - imgUrl: string
+ - name: 
+    type: String, 
+    required:true
+ - type:
+    type: String,
+    enum:['bar', 'accomodation','store', 'beach']
+ - description: 
+    type: String, 
+    required: true
+ - location:
+    type: String, 
+    required: true
+ - imgUrl: 
+    type: String, 
+    default: 'images/dog-default.jpg' 
 ```    
  
 ```
 User
- - username: String
- - email: Sring
- - password: String
- - favorites: [ref places id]
- - myPlaces: [ref places id]
+ - username:
+    type: String, 
+    required: true
+ - email: 
+    type: String,
+    required: true
+ - password:
+    type: String,
+    required: true
+ - favorites:
+    type: ObjectId,
+    ref: 'Places'
+ - myplaces:
+    type: ObjectId,
+    ref: 'Places'
 ```
 
 ## Links

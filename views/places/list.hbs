@@ -1,0 +1,8 @@
+<h1>Bares</h1>
+<ul>
+  {{#each places}}
+  <li>
+    <a href = "/places/{{this.id}}">{{ this.name }}</a>
+  </li>
+  {{/each}}
+</ul>
