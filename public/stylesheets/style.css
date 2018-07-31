@@ -24,6 +24,8 @@ body {
 
 }
 /* ---- components ---- */
+
+/*----- layout hbs -----*/
 nav { 
 height: 150px;
 background-color:black;
@@ -36,6 +38,21 @@ nav a {
   color:white;
   padding-left: 20px;
 }
+
+.logo{ 
+  text-decoration: none;
+}
+
+footer{
+  height: 200px;
+  background-color:black;
+  color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+/*----- index hbs -----*/
 
 header {
   height: 450px;
@@ -62,6 +79,7 @@ header p {
 .card {
  width: 100%;
  height: 300px;
+ margin: 10px 0;
  background-color: green;
  text-align: center;
  display: flex;
@@ -75,6 +93,7 @@ color: white;
 font-size: 80px;
 text-transform: uppercase;
 text-decoration: none;
+
 }
 
 .first-card { 
@@ -89,7 +108,7 @@ text-decoration: none;
   background-position: center;
   background-size: cover;
   filter: grayscale(60%);
-  margin: 20px 0;
+  
   
 }
 
@@ -100,12 +119,139 @@ text-decoration: none;
   filter: grayscale(60%);
 }
 
-footer{
-  height: 200px;
-  background-color:black;
-  color: white;
+.fourth-card { 
+  background-image: url(/images/beach-category.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(60%);
+}
+
+
+/*----- login hbs -----*/
+
+ .login-form {
+  height: 1400px;
+  width: 100%;
+  margin: 0 auto;
   display:flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  font-size: 30px;
+  background-color: rgba(157, 255, 0, 0.89);
+  background-image: url(/images/dog-login.jpg);
+  
+}
+
+#form {
+  margin: 30px auto;
+  width: 80%;
+  height: 800px;
+  font-size: 80px;
+}
+
+#form label {
+  color: #666;
+  display: inline-block;
+  margin: 60px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.field { 
+  width:100%;
+  
+}
+
+#form input,
+#form button {
+  box-sizing: border-box;
+  font-size: 40px;
+  outline: 0;
+  padding: 4px;
+  width: 100%;
+  height: 100px;
+}
+
+#form button {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 60px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#form button:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
+}
+
+form p {
+  font-size: 50px;
+  line-height: 1.3;
+}
+
+/*----- detail hbs -----*/
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img{
+  height: 600px;
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+}
+
+.card-body {
+  height: 800px;
+  display: flex;
+  flex-direction: 
+  
+  column;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 60px;
+}
+
+.card-text {
+  font-size: 40px;
+}
+
+.btn {
+  background: #43a3e6;
+  border: 1px solid #43a3e6;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 60px;
+  padding: 30px 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 40%;
+  margin-top: 100px;
+  
+}
+
+.btn:hover {
+  background: #fff;
+  color: #43a3e6;
+  transition: .3s ease background;
 }

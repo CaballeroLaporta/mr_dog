@@ -1,19 +1,21 @@
-<form id="form" action="/auth/signup" method="POST">
-  <div class="field">
-      <label for="username">Username</label><br>
-      <input type="text" name="username" placeholder="username">
-      <br><br>
+<div class="login-form">
+  <form id="form" action="/auth/signup" method="POST">
+    <div class="field">
+        <label for="username">Username</label><br>
+        <input type="text" name="username" placeholder="username">
+        <br><br>
 
-      <label for="email">Email</label><br>
-      <input type="email" name="email" placeholder="email">
-      <br><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" placeholder="email">
+        <br><br>
 
-      <label for="password">Password</label><br>
-      <input type="password" name="password" placeholder="password">
-      <br><br>
-  </div>
-  {{ message }}
-  <div class="field submit">
-    <button type="submit">Sign up</button>
-  </div>
-</form>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" placeholder="password">
+        <br><br>
+    </div>
+    {{ message }}
+    <div class="field submit">
+      <button type="submit">Sign up</button>
+    </div>
+  </form>
+</div>

@@ -1,5 +1,14 @@
-<img src="{{imgUrl}}" alt="{{ name }}">
-<h3>{{ name }}</h3>
-<p>{{ description }}</p>
-<p>{{ location }}</p>
-<a href="/places/{{id}}/contact">Contact</a>
+
+
+ <div class="cards-container">
+    <div class="card-img">
+      <img class="card-img-top" src="{{imgUrl}}" alt="{{ name }}">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ name }}</h5>
+        <p class="card-text">{{ description }}</p>
+        <p class="card-text">{{ location }}</p>
+        <a href="/places/{{id}}/contact" class="btn">Contact</a>
+    </div>
+  </div>
+    
