@@ -9,7 +9,7 @@ const placeSchema = new Schema({
   },
   type:{ 
     type: String, 
-    enum: ['bar', 'accomodation','store', 'beach'] 
+    enum: ['bars', 'accomodations','stores', 'beaches'] 
   },
   description: { 
     type: String, 
@@ -21,7 +21,7 @@ const placeSchema = new Schema({
   },
   imgUrl: { 
     type: String, 
-    default: 'images/dog-default.jpg' 
+    default: './public/images/dog-default.jpg' 
   }
 }, {
   timestamps: {

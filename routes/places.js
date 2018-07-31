@@ -7,7 +7,10 @@ router.get('/', function(req, res, next) {
   const placeType = req.query.type;
   Place.find({type: placeType})
     .then((filteredlist) => {
-      res.render('places/list', {places:filteredlist});
+      res.render('places/list', {
+        places:filteredlist,
+        type: placeType
+      });
     })
     .catch(error =>{
       console.log('error', error);

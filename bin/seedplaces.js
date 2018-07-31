@@ -7,73 +7,73 @@ Place.collection.drop();
 const places = [
   {
     name:  "Bar Ramon",
-    type: "bar",
+    type: "bars",
     description:  "cócteles y homenaje al jazz",
     location: "Carrer del Compte borrel, 81",
-    imgUrl: "www.google.com"
+    imgUrl: "/images/bar-category.jpg"
   },
   {
     name:  "Muak Arepa Bar",
-    type: "bar",
+    type: "bars",
     description:  "restaurante de comida venezolaza",
     location: "Carrer de Buenaventura Muñoz, 12",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/bar-category.jpg"
   },
   {
     name:  "El Perro Blu",
-    type: "bar",
+    type: "bars",
     description:  "Acogedora taberna con vermmús y tapas",
     location: "Carrer del parlament, 25",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/bar-category.jpg"
   },
   {
     name:  "Hotel claris",
-    type: "accomodation",
+    type: "accomodations",
     description:  "Hotel céntrico con servicio exclusivo para perros",
     location: "Carrer Pau Claris, 12, ",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/accomodation-category.jpeg"
   },
   {
     name:  "Hotel Rekord",
-    type: "accomodation",
+    type: "accomodations",
     description:  "Hotel moderno con piscina exterior y bar",
     location: "Carrer de muntaner, 352",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/accomodation-category.jpeg"
   },
   {
     name:  "Hotel Silken Sant Gervasi",
-    type: "accomodation",
+    type: "accomodations",
     description:  "Hotel tranquilo con restaurante y bar",
     location: "Carrer de Sant Gervasi de Cassiles, 26",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/accomodation-category.jpeg"
   },
   {
     name:  "Rock 01",
-    type: "store",
+    type: "stores",
     description:  "complementos y ropa infaltil de 0 a 8",
     location: "Carrer de Bonavista, 16",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/store-category.png"
   },
   {
     name:  "GreenLifeStyle",
-    type: "store",
+    type: "stores",
     description:  "tienda de ropa ecológica",
     location: "Carrer del Torrent de l'Olla, 95",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/store-category.png"
   },
   {
     name:  "Organic Market Diagonal",
-    type: "store",
+    type: "stores",
     description:  "supermercado natural",
     location: "Avinguda Diagonal, 430",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/store-category.png"
   },
   {
     name:  "Playa de Levant",
-    type: "beach",
+    type: "beaches",
     description:  "Espacio vallado al lado fel forum",
     location: "Passeig Maritim del Bogatell, 145",
-    imgUrl:"www.google.com"
+    imgUrl:"/images/dog-default.jpg"
   }
 ]
 
