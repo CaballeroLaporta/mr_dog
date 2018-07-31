@@ -2,6 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Place = require('../models/place');
 
+/*USE protected route*/
+
+router.use((req, res, next) =>{
+  if(req.session.currentUser) {
+    next();
+  } else{
+    res.redirect("/auth/login");
+  }
+});
+
 /* GET places type listing. */
 router.get('/', function(req, res, next) {
   const placeType = req.query.type;
