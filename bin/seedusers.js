@@ -2,13 +2,16 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/mr-dog-db');
 const User = require('../models/user');
 
+
+User.collection.drop();
+
 const users = [
   {
-    username:  "string",
-    email:  "string",
-    password:  "string",
-    favourites: [_id],
-    myplaces: [_id]
+    username:  "Thor",
+    email:  "thor@hotmail.com",
+    password:  "1234",
+    favourites: 0,
+    myplaces: 0
   }
 ]
 

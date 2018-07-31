@@ -7,6 +7,12 @@
   <body>
     <nav>
       <a class="logo">Mr Dog</a>
+      {{#if currentUser}}
+      <p>logged:{{currentUser.username}}</p>
+      <form action="/auth/logout" method="POST">
+        <input type="submit" value="logout">
+      </form>
+      {{/if}}
     </nav>
     {{{body}}}
     <footer>
