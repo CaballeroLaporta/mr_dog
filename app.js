@@ -9,14 +9,13 @@ const MongoStore = require('connect-mongo')(session);
 //const authMiddlewares = require('./middlewares/auth');
 
 
-mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/mr-dog-db', {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/auth');
+const authRouter = require('./routes/auth');
 const placesRouter = require('./routes/places');
 
 const app = express();
@@ -50,8 +49,9 @@ app.use(function(req,res,next){
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/auth', authRouter);
 app.use('/places', placesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
