@@ -23,10 +23,25 @@ router.get('/', function(req, res, next) {
       });
     })
     .catch(error =>{
-      console.log('error', error);
+      next(error);
     })
 });
 
+router.get('/add',(req, res, next) =>{
+  res.render('places/add');
+})
+
+router.post('/add', (req, res, next) =>{
+const {name, description, location, imgUrl} = req.body;
+if(!name || !description || !location) return res.render('places/add', {message: 'The fields can not be empty'});
+Place.create({name, description, location, imgUrl})
+  .then(data =>{
+    res.redirect('/places')
+  })
+  .catch(error =>{
+    next(error);
+  })
+})
 
 /* GET place detail. */
 router.get('/:id', function(req, res, next) {
@@ -36,7 +51,7 @@ router.get('/:id', function(req, res, next) {
       res.render('places/detail', place );
     })
     .catch(error =>{
-      console.log('error', error);
+      next(error);
     })
 });
 

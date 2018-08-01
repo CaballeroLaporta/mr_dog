@@ -3,8 +3,9 @@ const router = express.Router();
 const User = require("../models/user");
 
 router.get("/", (req, res, next) => {
-  res.render("../views/profile", {User});
-});
-
+    res.render('profile')
+})
+ 
 
 module.exports = router;
+
