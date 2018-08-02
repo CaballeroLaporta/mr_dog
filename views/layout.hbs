@@ -52,18 +52,17 @@
       <div id="sidebarMenu">
         <ul class="sidebarMenuInner">
       {{#if currentUser}}
-          <li><a href="profile" target="_blank">Profile</a></li>
+          <li><a href="/profile" >Profile</a></li>
           <li>
              <form action="/auth/logout" method="POST">
-            <a href="/auth/login" target="_blank">Logout</a></li>
+              <input type="submit" value="logout">
              {{!-- <input type="submit" value="Logout"> --}}
             </form>
       
-      {{else}} 
-      
-          <li><a href="/auth/login" target="_blank">Login</a></li>
-          <li><a href="/auth/signup" target="_blank">Signup</a></li>
-        {{/if}}
+      {{else}}
+          <li><a href="/auth/login" >Login</a></li>
+          <li><a href="/auth/signup" >Signup</a></li>
+      {{/if}}
         </ul>
         </div>
     </nav>
