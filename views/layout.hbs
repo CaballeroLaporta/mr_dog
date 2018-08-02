@@ -8,25 +8,82 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav>
-      <a class="logo" href="/">Mr Dog</a>
-      {{#if currentUser}}
+    <nav >
+  
+      {{!-- {{#if currentUser}}
       <p>logged:{{currentUser.username}}</p>
       <form action="/auth/logout" method="POST">
         <input type="submit" value="logout">
       </form>
-      {{/if}}
-       <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
+      {{/if}} --}}
+       {{!-- <div class="container" onclick="myFunction(this)">
+        <div class="bar1">
+          <
+             <p>Profile</p>
+             <li>Logout</li>
+           
+        </div>
+        <div class="bar2">borja</div>
         <div class="bar3"></div>
       </div>
+         {{#if currentUser}}
+         <div class="box">
+           <ul>
+             <li>Profile</li>
+             <li>Logout</li>
+           </ul>
+         </div>
+         {{/if}}
+        #else}}{{
+        <div class="box2">
+           <ul>
+             <li>Login</li>
+             <li>Signup</li>
+           </ul>
+         </div>
+        {{/else}} --}}
+        <a class="logo" href="/">Mr Dog</a>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+        <div class="spinner diagonal part-1"></div>
+        <div class="spinner horizontal"></div>
+        <div class="spinner diagonal part-2"></div>
+      </label>
+      <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+      {{#if currentUser}}
+          <li><a href="profile" target="_blank">Profile</a></li>
+          <li>
+             <form action="/auth/logout" method="POST">
+            <a href="/auth/login" target="_blank">Logout</a></li>
+             {{!-- <input type="submit" value="Logout"> --}}
+            </form>
+      
+      {{else}} 
+      
+          <li><a href="/auth/login" target="_blank">Login</a></li>
+          <li><a href="/auth/signup" target="_blank">Signup</a></li>
+        {{/if}}
+        </ul>
+        </div>
     </nav>
+
+
+
+
+
+
+
+
+
+
+
+    
     {{{body}}}
     <footer>
       <p>Created by Andrea / Borja</p>
     </footer>
-
+    <script src="/javascripts/main.js"></script>
   </body>
 </html>
 
