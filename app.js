@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -9,7 +11,7 @@ const MongoStore = require('connect-mongo')(session);
 //const authMiddlewares = require('./middlewares/auth');
 
 
-mongoose.connect('mongodb://localhost/mr-dog-db', {
+mongoose.connect(process.env.MONGODB_URI, {
   keepAlive: true,
   reconnectTries: Number.MAX_VALUE
 });
@@ -43,6 +45,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.use(function(req,res,next){
   app.locals.currentUser = req.session.currentUser;
