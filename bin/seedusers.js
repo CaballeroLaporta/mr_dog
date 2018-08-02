@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/mr-dog-db');
+mongoose.connect(process.env.MONGODB_URI);
 const User = require('../models/user');
 
 

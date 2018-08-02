@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoConnection = mongoose.connect('mongodb://localhost/mr-dog-db');
+const mongoConnection = mongoose.connect(process.env.MONGODB_URI);
 const Place = require('../models/place');
 
 Place.collection.drop();
