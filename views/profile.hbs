@@ -1,6 +1,22 @@
-<h2>{{ currentUser.username }}</h2>
-<h3>{{ currentUser.email }}</h3>
-<h3>My Places</h3>
+<section class="profile-data">
+  <h2>{{ currentUser.username }}</h2>
+  <h3>{{ currentUser.email }}</h3>
+</section>
+<section>
+  <h3>My Places</h3>
+  {{#each myplaces}}
+    <div class="myplaces-card">
+      <div class="myplaces-card-img">
+        {{this.imgUrl}}
+      </div>
+      <div class="myplaces-card-info">
+        {{this.name}}
+        {{this.description}}
+        {{this.location}}
+      </div>
+    </div>
+  {{/each}}
+</section>
 <div class="btn">
   <a href="/places/add">Add a new place</a>
 </div>

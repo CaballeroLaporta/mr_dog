@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
+const ObjectId = Schema.Types.ObjectId; 
 
 const placeSchema = new Schema({
   name: { 
@@ -18,10 +19,14 @@ const placeSchema = new Schema({
   location: { 
     type: String, 
     required: true 
-  },
+  },  
   imgUrl: { 
     type: String, 
     default: './public/images/dog-default.jpg' 
+  },
+  owner: { 
+    type: ObjectId,
+    ref:'User' 
   }
 }, {
   timestamps: {

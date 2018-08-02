@@ -32,11 +32,14 @@ router.get('/add',(req, res, next) =>{
 })
 
 router.post('/add', (req, res, next) =>{
-const {name, description, location, imgUrl} = req.body;
+const {name, type, description, location, imgUrl} = req.body;
 if(!name || !description || !location) return res.render('places/add', {message: 'The fields can not be empty'});
-Place.create({name, description, location, imgUrl})
-  .then(data =>{
-    res.redirect('/places')
+const owner = req.session.currentUser._id;
+console.log('owner', owner);
+console.log(typeof owner);
+Place.create({name, type, description, location, imgUrl, owner})
+  .then(data => {
+    res.redirect(`/places?type=${type}`);
   })
   .catch(error =>{
     next(error);

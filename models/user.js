@@ -19,10 +19,10 @@ const userSchema = new Schema({
     type: ObjectId,
     ref: 'Places'
   }],
-  myplaces:[{
-    type: ObjectId,
-    ref: 'Places'
-  }]
+  // myplaces:[{
+  //   type: ObjectId,
+  //   ref: 'Places'
+  // }]
 });
 
 const User = mongoose.model('User', userSchema);
