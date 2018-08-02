@@ -22,7 +22,7 @@ const placeSchema = new Schema({
   },  
   imgUrl: { 
     type: String, 
-    default: './public/images/dog-default.jpg' 
+    default: '/images/dog-default.jpg' 
   },
   owner: { 
     type: ObjectId,
