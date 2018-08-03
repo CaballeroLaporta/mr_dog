@@ -1,11 +1,16 @@
-<h2 class="type-title">{{type}}</h2>
-<div class="list-container">
-  <ul class="list">
-    {{#each places}}
-    <li class="list-card">
-      <img src="{{imgUrl}}" class="img-card">
-      <a href = "/places/{{this.id}}" class="li-name">{{ this.name }}</a>
-    </li>
-    {{/each}}
-  </ul>
+<div class="container-list-main">
+  <h2 class="type-title">{{type}}</h2>
+  <div class="map">
+    <img src="/images/map.png" alt="map">
+  </div>
+  <div class="list-container">
+    <ul class="list">
+      {{#each places}}
+      <li class="list-card">
+        <img src="{{imgUrl}}" class="img-card">
+        <a href = "/places/{{this.id}}" class="li-name">{{ this.name }}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

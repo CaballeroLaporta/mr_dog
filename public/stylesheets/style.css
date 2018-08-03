@@ -352,13 +352,26 @@ form p {
 
 /*----- list hbs -----*/
 
+.container-list-main {
+  display: flex;
+  flex-direction: column;
+}
+
 .type-title {
   color: white;
   font-size: 30px;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   padding-left: 20px;
   text-align: left;
   text-transform: capitalize;
+}
+
+.map {
+  height: fit-content;
+}
+
+.map img {
+  width: 100%;
 }
 
 .list-container {
