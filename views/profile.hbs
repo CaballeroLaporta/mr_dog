@@ -1,22 +1,27 @@
-<section class="profile-data">
-  <h2>{{ currentUser.username }}</h2>
-  <h3>{{ currentUser.email }}</h3>
-</section>
-<section>
-  <h3>My Places</h3>
+<div class="container-profile">
+  <section class="profile-data">
+    <h2>Profile</h2>
+    <p>Username: {{ currentUser.username }}</p>
+    <p>Email: {{ currentUser.email }}</p>
+  </section>
+  <div class="myplaces-title">
+    <h3>My Places</h3>
+  </div>
+  <section class="myplaces-container">
   {{#each myplaces}}
     <div class="myplaces-card">
       <div class="myplaces-card-img">
-        <img src="{{this.imgUrl}}">
+        <img src="{{this.imgUrl}}" class="imgpc">
       </div>
       <div class="myplaces-card-info">
-        {{this.name}}
-        {{this.description}}
-        {{this.location}}
+        <p class="name">{{this.name}}</p>
+        <p class="desc">{{this.description}}</p>
+        <p class="loc">{{this.location}}</p>
       </div>
     </div>
   {{/each}}
-</section>
-<div class="btn">
-  <a href="/places/add">Add a new place</a>
+  </section>
+  <div class="btn-add">
+    <a href="/places/add">Add a new place</a>
+  </div>
 </div>

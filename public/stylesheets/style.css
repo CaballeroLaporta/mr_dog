@@ -83,7 +83,7 @@ nav a {
 
 }
 .sidebarMenuInner{
-  margin: 46px 30px 108px;
+  margin: 46px 30px 46px;
   padding: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
@@ -108,7 +108,21 @@ nav a {
   cursor: pointer;
   text-decoration: none;
   font-size: 20px;
+  padding-left: 5px;
+
 }
+
+.btn-logout{
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+}
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
@@ -226,7 +240,8 @@ header p {
 
 .card a {
 color: white;
-font-size: 39px;
+font-size: 22px;
+text-shadow: 2px 2px 10px #000;
 font-weight: 900;
 text-transform: uppercase;
 text-decoration: none;
@@ -267,27 +282,26 @@ text-decoration: none;
 /*----- login hbs -----*/
 
  .login-form {
-  height: 1400px;
-  width: 100%;
+  height: 550px;
+  width: 80%;
   margin: 0 auto;
   display:flex;
   flex-direction: column;
   align-items: center;
-  background-color:#e1e0de;
   
 }
 
 #form {
-  margin: 30px auto;
+  margin: 15px auto;
   width: 80%;
   height: 800px;
-  font-size: 60px;
+  font-size: 20px;
 }
 
 #form label {
-  color: #666;
+  color: white;
   display: inline-block;
-  margin: 60px 0px;
+  margin: 20px 0px;
   text-align: center;
   width: 100%;
 }
@@ -300,11 +314,12 @@ text-decoration: none;
 #form input,
 #form button {
   box-sizing: border-box;
-  font-size: 40px;
+  font-size: 15px;
   outline: 0;
   padding: 4px;
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  height: 40px;
+  margin-left: 15px;
 }
 
 #form button {
@@ -314,13 +329,13 @@ text-decoration: none;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 60px;
+  font-size: 20px;
   padding: 8px 16px;
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 2px;
 }
 
 #form button:hover {
@@ -330,21 +345,70 @@ text-decoration: none;
 }
 
 form p {
-  font-size: 40px;
+  font-size: 15px;
   line-height: 1.3;
-  color: red;
+  color: white;
+}
+
+/*----- list hbs -----*/
+
+.type-title {
+  color: white;
+  font-size: 30px;
+  margin: 0 auto;
+  padding-left: 20px;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.list-container {
+  display: flex;
+  width: 95%;
+}
+
+.list {
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-card {
+  width: 100%;
+  height: 65px;
+  margin: 7px auto;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.img-card {
+  width: 40%;
+}
+
+.li-name {
+  width: 55%;
+  text-decoration-line: none;
+  padding-top: 19px;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
 }
 
 /*----- detail hbs -----*/
 
 .cards-container {
   width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  
 }
 
 .card-img{
-  height: 600px;
+  width: 100%;
+  height: 260px;
 }
 
 
@@ -353,38 +417,45 @@ form p {
   height: 100%;
 }
 
-.card-body {
-  height: 800px;
-  display: flex;
-  flex-direction: 
-  
-  column;
-  align-items: center;
+.card-info {
+  height: 285px;
+  margin: 0 3px;
+  flex-direction: column;
+  text-align: center;
 }
 
 .card-title {
-  font-size: 60px;
+  font-size: 35px;
+  color: white;
+  margin: 30px auto;
 }
 
 .card-text {
-  font-size: 40px;
+  padding-top: 15px;
+  font-size: 25px;
+  color: white;
+}
+
+.card-loc {
+  font-size: 20px;
+  color: white;
+  margin-top: 17px;
 }
 
 .btn {
   background: #43a3e6;
   border: 1px solid #43a3e6;
-  border-radius: 4px;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 60px;
-  padding: 30px 50px;
+  font-size: 23px;
+  padding: 8px 18px;
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
   width: 40%;
-  margin-top: 100px;
-  
+  margin-top: 5px; 
 }
 
 .btn:hover {
@@ -393,19 +464,132 @@ form p {
   transition: .3s ease background;
 }
 
+/*----- profile hbs -----*/
+
+.container-profile {
+  margin: 0 20px;
+  padding-top: 20px;
+}
+
+.profile-data {
+color: white;
+margin-bottom: 41px;
+}
+
+.myplaces-title {
+  width: 100%;
+  text-align: left;
+  color: white;
+}
+
+.myplaces-container {
+  display: flex;
+  height: 262px;
+  width: 100%;
+}
+
+.myplaces-card {
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height: 165px;
+}
+
+.myplaces-card-img {
+  width: 100%;
+  height: 65px;
+}
+
+.imgpc {
+  width: 100%;
+  height: 80px;
+}
+
+.myplaces-card-info{
+  width: 100%;
+}
+
+.myplaces-card-info .name {
+  color: black;
+  font-size: 18px;
+  padding-top: 20px;
+  margin:0px;
+}
+
+.myplaces-card-info .desc {
+  color: black;
+  font-size: 18px;
+  margin:0px;
+}
+
+.myplaces-card-info .loc {
+  color: black;
+  font-size: 15px;
+  margin:0px;
+}
+
+.btn-add {
+  background: #47525C;
+  border: 1px solid #47525C;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 23px;
+  padding: 7px 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 100%;
+  margin: 5px 0 16px;
+}
+
+.btn-add a {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: white;
+  font-weight: 300;
+}
+
 /*----- add hbs -----*/
 
-.selectorConf{
+.add-container {
+  width: 100%;
+  margin: 0 25px;
+  padding-top: 20px;
+}
+
+.add-container h3 {
+  color: white;
+}
+
+.add-form {
+  width: 100%;
+  height: 470px;
+  margin-left: -25px;
+}
+
+
+ .selectorConf{
+  width: 90%;
+  padding-left: 25px;
   display: flex;
   justify-content: space-between;
 }
 
+.selectorConf.label {
+  padding-bottom: 10px;
+}
+
+.selector-label {
+  width: 60%;
+}
 .selector {
   box-sizing: border-box;
-  font-size: 40px;
+  font-size: 20px;
   outline: 0;
   padding: 4px;
-  width: 60%;
-  height: 100px;
+  width: 40%;
+  height: 40px;
   margin-bottom: 20px;
 }
